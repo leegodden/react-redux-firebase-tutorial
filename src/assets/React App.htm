@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <!--
+    <link rel="icon" href="/favicon.ico" />
+
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <!-- <link rel="apple-touch-icon" href="/logo192.png" /> -->
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+
+    -->
+    <link href="./React App_files/css2" rel="stylesheet">
+    <title>React App</title>
+  <style type="text/css">@charset "UTF-8";
+/********************************************************/
+/* DEFAULT STYLES§
+/********************************************************/
+html {
+  font-size: 10px; }
+
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+html,
+body,
+#root,
+.App {
+  height: 100%; }
+
+*,
+::before,
+::after {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+.main {
+  width: 100%;
+  height: calc(100% - 20px);
+  max-width: 1450px;
+  padding: 0 10px;
+  margin: 0 auto; }
+
+/********************************************************/
+/* HEADER STYLES
+/********************************************************/
+.header {
+  height: 6.5rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); }
+
+.wrap {
+  position: relative;
+  height: 100%;
+  max-width: 1450px;
+  margin: 0 auto; }
+
+.logo {
+  width: 13rem;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%); }
+
+img {
+  display: block;
+  width: 100%;
+  margin: 0; }
+
+.homepage {
+  height: 100%; }
+
+/********************************************************/
+/* DIRECTORY PAGE 
+/********************************************************/
+.directory {
+  height: 100%; }
+  .directory .wrap {
+    display: inline-block;
+    width: 100%;
+    height: 100%; }
+    .directory .wrap .item {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      float: left;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+      .directory .wrap .item::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        height: 100%;
+        z-index: 1; }
+      .directory .wrap .item a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        font-size: 2rem;
+        line-height: 1;
+        font-weight: 400;
+        text-transform: uppercase;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 10px 15px;
+        border: 1px solid black; }
+        .directory .wrap .item a:hover {
+          background: rgba(223, 216, 216, 0.9);
+          opacity: 85%; }
+</style></head>
+  <body cz-shortcut-listen="true">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="App"><header class="header"><div class="wrap"><div class="logo"><img src="data:image/png;base64,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" alt="simpletut logo"></div></div></header><div class="main"><section class="homepage"><div class="directory"><div class="wrap"><div class="item" style="background-image: url(&quot;/static/media/shopWomens.c9c60ae5.jpg&quot;);"><a>Shop Womens</a></div><div class="item" style="background-image: url(&quot;/static/media/shopMens.19190d05.jpg&quot;);"><a>Shop Mens</a></div></div></div></section></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js"></script><script src="./React App_files/0.chunk.js"></script><script src="./React App_files/main.chunk.js"></script><script src="./React App_files/main.e954b6bfe22e61ae9092.hot-update.js"></script>
+
+</body></html>
