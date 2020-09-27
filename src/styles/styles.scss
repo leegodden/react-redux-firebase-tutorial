@@ -5,26 +5,27 @@
 html {
   font-size: 10px;
 }
+
 html,
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 html,
 body,
 #root,
-.App {
+.App,
+.fullHeight {
   height: 100%;
 }
 
 *,
-*:before,
-*:after {
+::before,
+::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  box-sizing: inherit;
 }
 
 body {
@@ -37,6 +38,13 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+}
+
+a,
+a:hover {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .main {
@@ -54,33 +62,60 @@ a {
 .header {
   height: 6.5rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  margin: 0 0 5px 0;
-}
-.wrap {
-  position: relative;
-  height: 100%;
-  max-width: 1450px;
-  margin: 0 auto;
-}
 
-.logo {
-  width: 13rem;
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+  .wrap {
+    position: relative;
+    height: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
 
-img {
-  display: block;
-  width: 100%;
-  margin: 0;
+    .logo {
+      width: 13rem;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+      img {
+        display: block;
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    .callToActions {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style-type: none;
+
+        a {
+          font-size: 1.8rem;
+          line-height: 1;
+          color: black;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 }
 
 .homepage {
-  height: 100%;
+  height: calc(100% - 6.5rem - 5.8rem);
 }
 /********************************************************/
 /* DIRECTORY PAGE 
@@ -115,7 +150,7 @@ img {
 
       a {
         position: absolute;
-        top: 60%;
+        top: 50%;
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
@@ -130,10 +165,25 @@ img {
         border: 1px solid black;
 
         &:hover {
-          background: rgba(223, 216, 216, 0.9);
-          opacity: 85%;
+          background: rgba(255, 255, 255, 1);
         }
       }
     }
   }
 }
+
+/********************************************************/
+/* FOOTER 
+/********************************************************/
+
+.footer {
+  .wrap {
+    max-width: 1450px;
+    padding: 20px 10px;
+    margin: 0 auto;
+  }
+}
+
+/********************************************************/
+/* REGISTRATION STYLES
+/********************************************************/
