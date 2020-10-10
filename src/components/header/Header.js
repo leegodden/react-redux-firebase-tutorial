@@ -17,6 +17,8 @@ const Header = (props) => {
           </Link>
         </div>
         <div className="callToActions">
+
+          {/* // if user logged in */}
           {currentUser && (
             <ul>
               <li>

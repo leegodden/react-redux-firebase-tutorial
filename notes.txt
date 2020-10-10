@@ -1,0 +1,58 @@
+=====================================================================================================
+  How to build an eCommerce Website using React Redux, GraphQL, Firebase #1 – Basic setup and homepage
+=====================================================================================================
+
+[1] BASIC setup
+
+1. install node-sass, and create a styles folder with styles.scss
+2. create a components folder in src, and in it add header folder with header.js 
+3. Add styles for header and add assets folder with logo image, add styles for logo, import logo into header.js
+4. Create a pages folder in src, add Home.js and add code
+5. in App.js import Homepage and Header
+6. Add directory folder with directory.js, add code, styles import images from assets folder and import into Homepage
+
+[2] Layouts and react router
+
+1. install react-router
+2. in index.js import BrowserRouter and wrap it around the App component
+3. Add registration.js in pagees folder add code and styles, import it ad add in to App.js 
+4. IMport  rRoute from react-router dom
+5. remove homepage and registration components from app and add 2 <Route>
+6. Add  home and registration path (exact) for  the <Routes> home & Reistration
+7. add Switch for routes
+8  add layouts folder and add Home and MainLayout
+9. import MainLayout in App.js, add with routes. Home component uses Homelayout component, <Mainlayout for others
+10 Add links in header for login and registration using {Link} from react-router-dom
+11. add styles for the header links
+12.  create a folder in components for footer , and footer.js
+13. Add footer code/styles and import into MainLayout
+
+[3] google signin
+
+1. set up firebase app copy code, enable google sign in authentification, set test mode, add rules, 
+    create users collection add displayName as field
+2. install firebase in project
+3. create firebase folder with config and utils files add intial code in utils.js
+4. create login.js in Pages folder ad code and import into app, create new route for login
+5. in components folder create a signin folder and components, import and render into the login page
+6. add styles for signin.js, create form for signin.js, and add styles
+7. in components create a forms folder and and button.js in it. add form in singIn.js with styles
+8. add buttons component into signin
+9. in firebase utils fire connect to firebase, and add further code
+10 import auth from firebase in Signin.js add singInWithgoogle prop to button
+11. add handleSubmit method  for form
+12 In App.js import auth from firebase
+13. turn App.js into a class component and add add Lifecycle methods and initial state
+14 add onAuthChange in component did mount add currentUser code
+15. In header components use our currentUser prop to determine the state, show login or logout link. use googleSignout
+
+[4] registration
+
+1.In firebase enable email authentification
+2.create a new folder i components: Signup and signup.js, add initial code
+3.import into registration page.
+4. add form for Signup
+5. in forms folde add form FormInput.js, add the code
+6. add rest of code for Signup, including auth and handleUserProfile function, state validation and styles
+7. add Singin folder and create code. Add new Login page  and import Signin into it
+8. add rest of Signin code including auth functionality from firebase and styles state, validation etc

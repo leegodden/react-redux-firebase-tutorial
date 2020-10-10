@@ -189,7 +189,10 @@ a:hover {
   width: 100%;
   max-width: 40rem;
   margin: 4rem auto 6rem;
-  border: 1px solid black;
+  border: 1px solid rgb(218, 217, 217);
+  padding: 10px;
+  border-radius: 0.5em;
+  box-shadow: 10px 10px 14px -5px rgba(217, 214, 214, 1);
 
   .wrap {
     padding: 5px;
@@ -236,8 +239,11 @@ a:hover {
   display: block;
   width: 100%;
   max-width: 40rem;
+  padding: 10px;
   margin: 4rem auto 6rem;
-  border: 1px solid black;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 0.5em;
+  box-shadow: 10px 10px 14px -5px rgba(217, 214, 214, 1);
 
   .wrap {
     padding: 5px;
@@ -290,7 +296,7 @@ a:hover {
     text-align: left;
     padding: 10px 5px;
     margin: 10px auto;
-    border: 1px solid #9e9e9e;
+    border: 1px solid #d8d7d7;
     outline: none;
   }
 }
